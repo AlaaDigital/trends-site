@@ -1,9 +1,11 @@
 [
   {
-    "title": "gggggggg",
-    "description": "ggggg",
-    "url": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop](https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop)",
-    "date": "2026-09-25T15:26:53.165Z"
-  },
- 
+    "title": "Welcome to Global Trends",
+    "mainCategory": "news",
+    "subCategory": "general",
+    "media": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop",
+    "keywords": "global trends, news feed",
+    "desc": "This is your first trend data loaded successfully from GitHub repository.",
+    "date": "2026-09-25T14:15:36.102Z"
+  }
 ]
