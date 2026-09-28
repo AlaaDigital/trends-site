@@ -1,5 +1,5 @@
-import fs from 'fs';
-import path from 'path';
+const fs = require('fs');
+const path = require('path');
 
 const ROOT = '.';
 const files = fs.readdirSync(ROOT).filter(f => f.endsWith('.html') && f !== '404.html');
@@ -9,7 +9,7 @@ console.log(`Found ${files.length} HTML files:`, files);
 const trends = [];
 
 for (const file of files) {
-  if (file === 'index.html') continue; // لا نضيف الرئيسية نفسها
+  if (file === 'index.html') continue;
   try {
     const content = fs.readFileSync(path.join(ROOT, file), 'utf8');
     const titleMatch = content.match(/<title>(.*?)<\/title>/i);
@@ -32,11 +32,9 @@ for (const file of files) {
   }
 }
 
-// 1. نولد _trends.json للرئيسية الأوتوماتيكية
 fs.writeFileSync('_trends.json', JSON.stringify(trends, null, 2));
 console.log('_trends.json generated with', trends.length, 'trends');
 
-// 2. نولد sitemap.xml أوتوماتيك
 let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
