@@ -1,124 +1,83 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TRENDS.AFDALBOT - What's Burning Right Now</title>
 <meta name="description" content="Discover what's burning right now - viral trends, breaking news, AI leaks and internet culture.">
-<meta name="robots" content="index, follow">
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <style>
-:root{--fire:#FF4D00;--fire2:#FF8A00;--bg:#070707;--card:#121212;--border:#1e1e1e;--muted:#888}
+:root{--fire:#FF4D00;--bg:#070707;--card:#121212;--border:#1e1e1e;--muted:#888}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,'Inter',Segoe UI,Roboto,Arial;background:var(--bg);color:#fff;line-height:1.5;-webkit-font-smoothing:antialiased}
-a{color:inherit;text-decoration:none}
-.top{position:sticky;top:0;z-index:50;background:rgba(7,7,7,0.8);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+body{font-family:-apple-system,BlinkMacSystemFont,Inter,Segoe UI,Roboto,Arial;background:var(--bg);color:#fff;line-height:1.5}
+.top{position:sticky;top:0;z-index:50;background:rgba(7,7,7,.8);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
 .top-inner{max-width:1280px;margin:0 auto;padding:16px 24px;display:flex;justify-content:space-between;align-items:center}
-.logo{font-weight:900;font-size:1.1rem;letter-spacing:-0.5px}.logo span{color:var(--fire)}
-.nav{display:flex;gap:20px;font-size:.85rem;color:var(--muted)}
-.nav a:hover{color:#fff}
+.logo{font-weight:900;font-size:1.1rem;letter-spacing:-.5px}.logo span{color:var(--fire)}
 .hero{max-width:1280px;margin:0 auto;padding:70px 24px 30px 24px}
-.hero h1{font-size:clamp(2.8rem,7vw,4.5rem);line-height:0.9;letter-spacing:-3px;font-weight:900}
+.hero h1{font-size:clamp(2.8rem,7vw,4.5rem);line-height:.9;letter-spacing:-3px;font-weight:900}
 .hero h1 span{background:linear-gradient(90deg,var(--fire),#FFB700);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hero p{color:var(--muted);font-size:1.05rem;margin-top:14px;max-width:520px;line-height:1.6}
-.filters{max-width:1280px;margin:0 auto;padding:0 24px 20px 24px;display:flex;gap:10px;flex-wrap:wrap}
-.filter{padding:8px 16px;border-radius:999px;border:1px solid var(--border);background:#111;font-size:.8rem;font-weight:600;color:#aaa;cursor:pointer;transition:.2s}
-.filter.active{background:#fff;color:#000;border-color:#fff}
+.hero p{color:var(--muted);font-size:1.05rem;margin-top:14px;max-width:520px}
 .grid{max-width:1280px;margin:0 auto;padding:10px 24px 60px 24px;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px}
-.card{background:var(--card);border:1px solid var(--border);border-radius:24px;overflow:hidden;transition:.25s;position:relative}
+.card{background:var(--card);border:1px solid var(--border);border-radius:24px;overflow:hidden;transition:.25s}
 .card:hover{transform:translateY(-5px);border-color:#2a2a2a;box-shadow:0 20px 40px rgba(0,0,0,.5)}
 .thumb{height:210px;background:#0f0f0f;position:relative;overflow:hidden}
 .thumb img{width:100%;height:100%;object-fit:cover;transition:.4s}
 .card:hover .thumb img{transform:scale(1.05)}
-.cat{position:absolute;top:14px;left:14px;background:var(--fire);color:#fff;padding:5px 11px;border-radius:999px;font-size:.68rem;font-weight:800;letter-spacing:.5px}
-.fire-score{position:absolute;top:14px;right:14px;background:rgba(0,0,0,.7);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.1);padding:5px 10px;border-radius:999px;font-size:.75rem;font-weight:700}
+.cat{position:absolute;top:14px;left:14px;background:var(--fire);color:#fff;padding:5px 11px;border-radius:999px;font-size:.68rem;font-weight:800}
+.fire-score{position:absolute;top:14px;right:14px;background:rgba(0,0,0,.7);backdrop-filter:blur(10px);padding:5px 10px;border-radius:999px;font-size:.75rem;font-weight:700}
 .info{padding:18px 18px 20px 18px}
-.info h3{font-size:1.18rem;line-height:1.25;font-weight:700;letter-spacing:-0.3px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.5em}
-.meta{display:flex;gap:10px;margin-top:10px;color:var(--muted);font-size:.78rem;align-items:center}
+.info h3{font-size:1.18rem;line-height:1.25;font-weight:700;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.5em}
+.meta{display:flex;gap:10px;margin-top:10px;color:var(--muted);font-size:.78rem}
 .dot{width:3px;height:3px;background:#333;border-radius:50%}
 .footer{border-top:1px solid var(--border);padding:40px 24px;color:#555;font-size:.8rem}
-.footer-inner{max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px}
+.footer-inner{max-width:1280px;margin:0 auto;display:flex;justify-content:space-between}
+.loading{grid-column:1/-1;text-align:center;padding:60px;color:#666}
 </style>
 </head>
 <body>
-<div class="top">
-  <div class="top-inner">
-    <div class="logo">TRENDS<span>.AFDALBOT</span></div>
-    <div class="nav">
-      <a href="/">Trending</a>
-      <a href="/">Viral</a>
-      <a href="/">AI</a>
-    </div>
-  </div>
-</div>
-
-<div class="hero">
-  <h1>What's <span>BURNING</span><br>Right Now 🔥</h1>
-  <p>The fastest viral trends, breaking leaks and internet culture — updated hourly.</p>
-</div>
-
-<div class="filters">
-  <div class="filter active">All</div>
-  <div class="filter">Viral</div>
-  <div class="filter">AI</div>
-  <div class="filter">Tech</div>
-  <div class="filter">Breaking</div>
-</div>
-
-<div class="grid" id="grid">
-  <!-- سيتم ملء الترندات هنا أوتوماتيك من ملفات HTML -->
-</div>
-
-<div class="footer">
-  <div class="footer-inner">
-    <div>© 2026 trends.afdalbot.com • Fastest trends indexing</div>
-    <div style="display:flex;gap:16px"><a href="/sitemap.xml" style="color:#666">Sitemap</a><a href="/robots.txt" style="color:#666">Robots</a></div>
-  </div>
-</div>
-
+<div class="top"><div class="top-inner"><div class="logo">TRENDS<span>.AFDALBOT</span></div></div></div>
+<div class="hero"><h1>What's <span>BURNING</span><br>Right Now 🔥</h1><p>The fastest viral trends, breaking leaks and internet culture — updated hourly.</p></div>
+<div class="grid" id="grid"><div class="loading">Loading latest trends...</div></div>
+<div class="footer"><div class="footer-inner"><div>© 2026 trends.afdalbot.com</div><div><a href="/sitemap.xml" style="color:#666">Sitemap</a></div></div></div>
 <script>
-// نظام أوتوماتيكي - يقرا كل صفحات الترند وحدو
+const REPO = 'AlaaDigital/trends-site';
 async function loadTrends(){
   const grid = document.getElementById('grid');
   try{
-    const res = await fetch('/_trends.json?t='+Date.now());
-    if(!res.ok) throw new Error();
-    let trends = await res.json();
-    if(!trends || trends.length===0){
-      grid.innerHTML = `
-        <a class="card" href="/iphone-17-pro-leak.html">
-          <div class="thumb"><img src="https://images.unsplash.com/photo-1591337676887-a217a6970a8a?w=600"><span class="cat">VIRAL</span><span class="fire-score">🔥 9.8</span></div>
-          <div class="info"><h3>iPhone 17 Pro Leak Reveals Shocking New Design</h3><div class="meta"><span>May 13</span><span class="dot"></span><span>Viral</span></div></div>
-        </a>
-        <a class="card" href="/chatgpt-5-release-date.html">
-          <div class="thumb"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600"><span class="cat">AI</span><span class="fire-score">🔥 9.6</span></div>
-          <div class="info"><h3>ChatGPT-5 Release Date Leaked by OpenAI Insider</h3><div class="meta"><span>May 13</span><span class="dot"></span><span>AI Tools</span></div></div>
-        </a>`;
+    // Try _trends.json first (if exists from build), else GitHub API
+    let trends = [];
+    try{
+      const r = await fetch('/_trends.json?t='+Date.now());
+      if(r.ok) trends = await r.json();
+    }catch{}
+    if(trends.length===0){
+      // Fallback: GitHub API
+      const apiRes = await fetch(`https://api.github.com/repos/${REPO}/contents?ref=main&t=${Date.now()}`);
+      if(!apiRes.ok) throw new Error('API fail');
+      const files = await apiRes.json();
+      const htmlFiles = files.filter(f=>f.name.endsWith('.html') && f.name!=='index.html' && f.name!=='404.html');
+      trends = htmlFiles.map(f=>{
+        const name = f.name.replace('.html','').replace(/-/g,' ');
+        return {
+          file: `/${f.name}`,
+          title: name.charAt(0).toUpperCase()+name.slice(1),
+          image: `https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600`,
+          date: 'May 2026'
+        };
+      });
+    }
+    if(trends.length===0){
+      grid.innerHTML='<div class=loading>No trends yet. Upload your first HTML file!</div>';
       return;
     }
-    trends = trends.reverse(); // الأحدث أولا
-    grid.innerHTML = trends.map(t => {
-      const cat = (t.title.toLowerCase().includes('iphone') || t.title.toLowerCase().includes('leak')) ? 'VIRAL' : (t.title.toLowerCase().includes('chatgpt') || t.title.toLowerCase().includes('ai') ? 'AI' : 'TRENDING');
-      return `
-      <a class="card" href="${t.file}">
-        <div class="thumb">
-          <img src="${t.image}" alt="${t.title}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600'">
-          <span class="cat">${cat}</span>
-          <span class="fire-score">🔥 9.${Math.floor(Math.random()*4+5)}</span>
-        </div>
-        <div class="info">
-          <h3>${t.title}</h3>
-          <div class="meta"><span>${t.date || 'May 13'}</span><span class="dot"></span><span>${cat}</span></div>
-        </div>
-      </a>`;
+    // Sort newest first if possible
+    trends = trends.reverse();
+    grid.innerHTML = trends.map(t=>{
+      const cat = t.file.includes('iphone')||t.title.toLowerCase().includes('iphone')?'VIRAL':t.file.includes('chatgpt')||t.title.toLowerCase().includes('chatgpt')?'AI':'TRENDING';
+      return `<a class="card" href="${t.file}"><div class="thumb"><img src="${t.image}" alt="${t.title}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600'"><span class="cat">${cat}</span><span class="fire-score">🔥 9.${Math.floor(Math.random()*4+5)}</span></div><div class="info"><h3>${t.title}</h3><div class="meta"><span>${t.date||'May 13'}</span><span class="dot"></span><span>${cat}</span></div></div></a>`;
     }).join('');
   }catch(e){
-    // لو ما فيهش _trends.json بعد، عرض أمثلة جميلة
-    grid.innerHTML = `
-      <a class="card" href="/iphone-17-pro-leak.html">
-        <div class="thumb"><img src="https://images.unsplash.com/photo-1591337676887-a217a6970a8a?w=600"><span class="cat">VIRAL</span><span class="fire-score">🔥 9.8</span></div>
-        <div class="info"><h3>iPhone 17 Pro Leak Reveals Shocking New Design</h3><div class="meta"><span>May 13</span><span class="dot"></span><span>Viral</span></div></div>
-      </a>`;
+    console.error(e);
+    grid.innerHTML='<div class=loading>Unable to load trends. Please upload HTML files to GitHub.</div>';
   }
 }
 loadTrends();
