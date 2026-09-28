@@ -3,84 +3,146 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TRENDS.AFDALBOT - What's Burning Right Now</title>
-<meta name="description" content="Discover what's burning right now - viral trends, breaking news, AI leaks and internet culture.">
+<title>TRENDS.AFDALBOT - What's Burning Right Now | Viral Trends 2026</title>
+<meta name="description" content="Discover what's burning right now - viral trends, AI leaks, iPhone 17, ChatGPT, and internet culture. Updated hourly with the hottest stories.">
+<meta property="og:title" content="TRENDS.AFDALBOT - What's Burning Right Now">
+<meta property="og:description" content="The fastest viral trends, breaking leaks and internet culture.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=1200">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://trends.afdalbot.com/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"trends.afdalbot.com","url":"https://trends.afdalbot.com/","description":"Viral trends and breaking news","potentialAction":{"@type":"SearchAction","target":"https://trends.afdalbot.com/?q={search_term_string}","query-input":"required name=search_term_string"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-:root{--fire:#FF4D00;--bg:#070707;--card:#121212;--border:#1e1e1e;--muted:#888}
+:root{--fire:#FF4D00;--fire2:#FF8A00;--bg:#060608;--card:#111113;--card2:#19191d;--border:#212127;--text:#f5f5f7;--muted:#8b8b93;--muted2:#5a5a63}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,Inter,Segoe UI,Roboto,Arial;background:var(--bg);color:#fff;line-height:1.5}
-.top{position:sticky;top:0;z-index:50;background:rgba(7,7,7,.8);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
-.top-inner{max-width:1280px;margin:0 auto;padding:16px 24px;display:flex;justify-content:space-between;align-items:center}
-.logo{font-weight:900;font-size:1.1rem;letter-spacing:-.5px}.logo span{color:var(--fire)}
-.hero{max-width:1280px;margin:0 auto;padding:70px 24px 30px 24px}
-.hero h1{font-size:clamp(2.8rem,7vw,4.5rem);line-height:.9;letter-spacing:-3px;font-weight:900}
-.hero h1 span{background:linear-gradient(90deg,var(--fire),#FFB700);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hero p{color:var(--muted);font-size:1.05rem;margin-top:14px;max-width:520px}
-.grid{max-width:1280px;margin:0 auto;padding:10px 24px 60px 24px;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px}
-.card{background:var(--card);border:1px solid var(--border);border-radius:24px;overflow:hidden;transition:.25s}
-.card:hover{transform:translateY(-5px);border-color:#2a2a2a;box-shadow:0 20px 40px rgba(0,0,0,.5)}
-.thumb{height:210px;background:#0f0f0f;position:relative;overflow:hidden}
-.thumb img{width:100%;height:100%;object-fit:cover;transition:.4s}
-.card:hover .thumb img{transform:scale(1.05)}
-.cat{position:absolute;top:14px;left:14px;background:var(--fire);color:#fff;padding:5px 11px;border-radius:999px;font-size:.68rem;font-weight:800}
-.fire-score{position:absolute;top:14px;right:14px;background:rgba(0,0,0,.7);backdrop-filter:blur(10px);padding:5px 10px;border-radius:999px;font-size:.75rem;font-weight:700}
-.info{padding:18px 18px 20px 18px}
-.info h3{font-size:1.18rem;line-height:1.25;font-weight:700;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.5em}
-.meta{display:flex;gap:10px;margin-top:10px;color:var(--muted);font-size:.78rem}
-.dot{width:3px;height:3px;background:#333;border-radius:50%}
-.footer{border-top:1px solid var(--border);padding:40px 24px;color:#555;font-size:.8rem}
-.footer-inner{max-width:1280px;margin:0 auto;display:flex;justify-content:space-between}
-.loading{grid-column:1/-1;text-align:center;padding:60px;color:#666}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;line-height:1.6}
+h1,h2,h3{font-family:'Space Grotesk',sans-serif;letter-spacing:-.02em}
+.top{position:sticky;top:0;z-index:100;background:rgba(6,6,8,.75);backdrop-filter:blur(24px) saturate(180%);border-bottom:1px solid var(--border)}
+.top-inner{max-width:1320px;margin:0 auto;padding:14px 24px;display:flex;justify-content:space-between;align-items:center}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.15rem;letter-spacing:-.5px}
+.logo-icon{width:34px;height:34px;background:linear-gradient(135deg,var(--fire),var(--fire2));border-radius:10px;display:grid;place-items:center;font-size:1.1rem}
+.live{display:flex;align-items:center;gap:8px;background:#1a1a1f;border:1px solid var(--border);padding:6px 14px;border-radius:999px;font-size:.78rem;color:var(--muted)}
+.live-dot{width:7px;height:7px;background:#00FF88;border-radius:50%;box-shadow:0 0 8px #00FF88;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+.hero{max-width:1320px;margin:0 auto;padding:56px 24px 28px;display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:end}
+@media(max-width:860px){.hero{grid-template-columns:1fr;padding:36px 20px 20px}}
+.hero h1{font-size:clamp(2.8rem,6vw,4.8rem);line-height:.9;letter-spacing:-3px;font-weight:700}
+.hero h1 i{font-style:normal;background:linear-gradient(90deg,var(--fire),var(--fire2),#FFD600);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero-right{padding-bottom:10px}
+.hero-right p{color:var(--muted);font-size:1.05rem;line-height:1.5;margin-bottom:16px}
+.stats{display:flex;gap:18px}
+.stat{font-size:.8rem;color:var(--muted2)}.stat b{color:var(--text);font-size:1.1rem;display:block}
+.filters{max-width:1320px;margin:0 auto;padding:0 24px 18px;display:flex;gap:10px;overflow:auto}
+.filters button{background:var(--card);border:1px solid var(--border);color:var(--muted);padding:8px 16px;border-radius:999px;font-size:.82rem;font-weight:600;cursor:pointer;white-space:nowrap;transition:.2s}
+.filters button.active,.filters button:hover{background:var(--text);color:var(--bg);border-color:var(--text)}
+.grid-wrap{max-width:1320px;margin:0 auto;padding:10px 24px 80px}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+@media(max-width:860px){.grid{grid-template-columns:1fr}}
+.card{grid-column:span 4;background:var(--card);border:1px solid var(--border);border-radius:20px;overflow:hidden;transition:all .3s cubic-bezier(.16,1,.3,1);position:relative;display:flex;flex-direction:column}
+@media(max-width:1100px){.card{grid-column:span 6}}@media(max-width:860px){.card{grid-column:span 12}}
+.card:hover{transform:translateY(-6px);border-color:#2a2a33;box-shadow:0 24px 48px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.05) inset}
+.card.featured{grid-column:span 8;flex-direction:row}
+@media(max-width:860px){.card.featured{flex-direction:column;grid-column:span 12}}
+.card.featured .thumb{flex:1.2;height:auto;min-height:360px}
+.card.featured .info{flex:.8;padding:28px}
+.thumb{height:220px;position:relative;overflow:hidden;background:#0e0e11}
+.thumb img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.16,1,.3,1)}
+.card:hover .thumb img{transform:scale(1.06)}
+.badge{position:absolute;top:14px;left:14px;background:var(--fire);color:#fff;padding:5px 11px;border-radius:999px;font-size:.68rem;font-weight:800;letter-spacing:.5px;z-index:2}
+.score{position:absolute;top:14px;right:14px;background:rgba(0,0,0,.7);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.12);color:#fff;padding:5px 11px;border-radius:999px;font-size:.76rem;font-weight:700;z-index:2}
+.info{padding:18px 18px 20px;display:flex;flex-direction:column;flex:1}
+.info h3{font-size:1.18rem;line-height:1.25;font-weight:700;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.5em;margin-bottom:8px}
+.info h3 a{color:inherit;text-decoration:none}.info h3 a:hover{color:var(--fire)}
+.excerpt{color:var(--muted);font-size:.88rem;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;flex:1}
+.meta{display:flex;align-items:center;gap:10px;margin-top:14px;color:var(--muted2);font-size:.76rem}
+.meta img{width:20px;height:20px;border-radius:50%}
+.dot{width:3px;height:3px;background:#2a2a33;border-radius:50%}
+.loading{grid-column:1/-1;text-align:center;padding:80px 20px;color:var(--muted)}
+.loading b{display:block;color:var(--text);font-size:1.2rem;margin-bottom:8px}
+.footer{border-top:1px solid var(--border);padding:48px 24px;background:#08080a}
+.footer-inner{max-width:1320px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;color:var(--muted2);font-size:.82rem}
+.footer a{color:var(--muted);text-decoration:none}.footer a:hover{color:var(--text)}
+.skeleton{background:linear-gradient(90deg,var(--card) 25%,var(--card2) 50%,var(--card) 75%);background-size:200% 100%;animation:shim 1.2s infinite}
+@keyframes shim{0%{background-position:200% 0}100%{background-position:-200% 0}}
 </style>
 </head>
 <body>
-<div class="top"><div class="top-inner"><div class="logo">TRENDS<span>.AFDALBOT</span></div></div></div>
-<div class="hero"><h1>What's <span>BURNING</span><br>Right Now 🔥</h1><p>The fastest viral trends, breaking leaks and internet culture — updated hourly.</p></div>
-<div class="grid" id="grid"><div class="loading">Loading latest trends...</div></div>
-<div class="footer"><div class="footer-inner"><div>© 2026 trends.afdalbot.com</div><div><a href="/sitemap.xml" style="color:#666">Sitemap</a></div></div></div>
+<div class="top"><div class="top-inner"><div class="logo"><div class="logo-icon">🔥</div>TRENDS.AFDALBOT</div><div class="live"><span class="live-dot"></span><span id="live-count">LIVE</span> • Updated hourly</div></div></div>
+<div class="hero"><div><h1>What's <i>BURNING</i><br>Right Now</h1></div><div class="hero-right"><p>The fastest viral trends, AI leaks, and internet culture — curated for what's hot, not what's old.</p><div class="stats"><div class="stat"><b id="count">—</b>trends live</div><div class="stat"><b>Hourly</b>updates</div><div class="stat"><b>100%</b>SEO ready</div></div></div></div>
+<div class="filters"><button class="active" data-f="all">All 🔥</button><button data-f="AI">AI 🤖</button><button data-f="VIRAL">Viral 📈</button><button data-f="IPHONE">iPhone 📱</button><button data-f="TECH">Tech 💻</button></div>
+<div class="grid-wrap"><div class="grid" id="grid"><div class="loading"><b>Loading hottest trends...</b>Reading your GitHub repo automatically.</div></div></div>
+<div class="footer"><div class="footer-inner"><div>© 2026 trends.afdalbot.com — Built for Google Discover & SEO.</div><div><a href="/sitemap.xml">Sitemap</a> • <a href="/robots.txt">Robots</a> • <a href="/">Home</a></div></div></div>
 <script>
-const REPO = 'AlaaDigital/trends-site';
-async function loadTrends(){
-  const grid = document.getElementById('grid');
-  try{
-    // Try _trends.json first (if exists from build), else GitHub API
-    let trends = [];
-    try{
-      const r = await fetch('/_trends.json?t='+Date.now());
-      if(r.ok) trends = await r.json();
-    }catch{}
-    if(trends.length===0){
-      // Fallback: GitHub API
-      const apiRes = await fetch(`https://api.github.com/repos/${REPO}/contents?ref=main&t=${Date.now()}`);
-      if(!apiRes.ok) throw new Error('API fail');
-      const files = await apiRes.json();
-      const htmlFiles = files.filter(f=>f.name.endsWith('.html') && f.name!=='index.html' && f.name!=='404.html');
-      trends = htmlFiles.map(f=>{
-        const name = f.name.replace('.html','').replace(/-/g,' ');
-        return {
-          file: `/${f.name}`,
-          title: name.charAt(0).toUpperCase()+name.slice(1),
-          image: `https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600`,
-          date: 'May 2026'
-        };
-      });
-    }
-    if(trends.length===0){
-      grid.innerHTML='<div class=loading>No trends yet. Upload your first HTML file!</div>';
-      return;
-    }
-    // Sort newest first if possible
-    trends = trends.reverse();
-    grid.innerHTML = trends.map(t=>{
-      const cat = t.file.includes('iphone')||t.title.toLowerCase().includes('iphone')?'VIRAL':t.file.includes('chatgpt')||t.title.toLowerCase().includes('chatgpt')?'AI':'TRENDING';
-      return `<a class="card" href="${t.file}"><div class="thumb"><img src="${t.image}" alt="${t.title}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600'"><span class="cat">${cat}</span><span class="fire-score">🔥 9.${Math.floor(Math.random()*4+5)}</span></div><div class="info"><h3>${t.title}</h3><div class="meta"><span>${t.date||'May 13'}</span><span class="dot"></span><span>${cat}</span></div></div></a>`;
-    }).join('');
-  }catch(e){
-    console.error(e);
-    grid.innerHTML='<div class=loading>Unable to load trends. Please upload HTML files to GitHub.</div>';
+const REPO='AlaaDigital/trends-site', BRANCH='main';
+const grid=document.getElementById('grid'), countEl=document.getElementById('count'), liveEl=document.getElementById('live-count');
+let allTrends=[];
+function extractMeta(html, fileName){
+  const doc=new DOMParser().parseFromString(html,'text/html');
+  const get=(sel, attr)=>{const e=doc.querySelector(sel); return e? (attr? e.getAttribute(attr): e.textContent): '';}
+  let title=get('title')||fileName.replace('.html','').replace(/-/g,' ');
+  title=title.replace(/\s*-\s*trends\.afdalbot\.com.*/i,'').trim();
+  let image=get('meta[property="og:image"]','content')||get('meta[name="og:image"]','content')||'';
+  let desc=get('meta[name="description"]','content')||get('meta[property="og:description"]','content')||'';
+  if(!image){
+    const firstImg=doc.querySelector('article img, main img, img');
+    if(firstImg) image=firstImg.src;
   }
+  if(!image) image=`https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&q=80&auto=format&fit=crop`;
+  if(!desc) desc=title.substring(0,140);
+  const lower=title.toLowerCase()+fileName.toLowerCase();
+  let cat='TRENDING';
+  if(lower.includes('iphone')||lower.includes('apple')) cat='IPHONE';
+  else if(lower.includes('chatgpt')||lower.includes('ai')||lower.includes('gemini')||lower.includes('openai')) cat='AI';
+  else if(lower.includes('tech')||lower.includes('leak')) cat='TECH';
+  else if(lower.includes('viral')||lower.includes('tiktok')) cat='VIRAL';
+  return {title:title.substring(0,90), image, desc:desc.substring(0,130), cat, file:`/${fileName}`, date: new Date().toLocaleDateString('en-US',{month:'short',day:'numeric'})};
 }
-loadTrends();
+async function load(){
+  try{
+    const api=await fetch(`https://api.github.com/repos/${REPO}/contents?ref=${BRANCH}&t=${Date.now()}`,{headers:{'Accept':'application/vnd.github.v3+json'}});
+    if(!api.ok) throw new Error('GitHub API');
+    const files=await api.json();
+    let htmlFiles=files.filter(f=>f.type==='file' && f.name.toLowerCase().endsWith('.html') && !['index.html','404.html'].includes(f.name.toLowerCase())).map(f=>f.name);
+    if(htmlFiles.length===0){grid.innerHTML='<div class=loading><b>No trends yet</b>Upload your first HTML file to GitHub root to see it here automatically.</div>';countEl.textContent='0';return;}
+    countEl.textContent=htmlFiles.length; liveEl.textContent=`${htmlFiles.length} LIVE`;
+    // Fetch each file's content to extract real image/title (limit to 24 for speed)
+    const toFetch=htmlFiles.slice(0,30);
+    const promises=toFetch.map(async name=>{
+      try{
+        const raw=await fetch(`https://raw.githubusercontent.com/${REPO}/${BRANCH}/${encodeURIComponent(name)}?t=${Date.now()}`).then(r=>r.text());
+        return extractMeta(raw,name);
+      }catch(e){return {title:name.replace('.html','').replace(/-/g,' '),image:`https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600`,desc:'Trending now',cat:'TRENDING',file:`/${name}`,date:'Today'};}
+    });
+    allTrends=await Promise.all(promises);
+    allTrends.reverse();
+    render(allTrends);
+  }catch(e){console.error(e); grid.innerHTML=`<div class=loading><b>Can't load trends</b>${e.message}<br><small>Make sure repo is public: ${REPO}</small></div>`;}
+}
+function render(list){
+  if(list.length===0){grid.innerHTML='<div class=loading><b>No matches</b></div>';return;}
+  grid.innerHTML=list.map((t,i)=>{
+    const isFeatured=i===0?' featured':'';
+    return `<article class="card${isFeatured}" data-cat="${t.cat}">
+      <a class="thumb" href="${t.file}" style="display:block">
+        <img src="${t.image}" alt="${t.title}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800'">
+        <span class="badge">${t.cat}</span><span class="score">🔥 9.${Math.floor(Math.random()*4+5)}</span>
+      </a>
+      <div class="info">
+        <h3><a href="${t.file}">${t.title}</a></h3>
+        <p class="excerpt">${t.desc}</p>
+        <div class="meta"><img src="https://i.pravatar.cc/100?u=trends" alt=""><span>Trends Team</span><span class="dot"></span><span>${t.date}</span><span class="dot"></span><span>${Math.floor(Math.random()*3+2)} min</span></div>
+      </div>
+    </article>`;
+  }).join('');
+}
+document.querySelectorAll('.filters button').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.filters button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');
+    const f=btn.dataset.f; if(f==='all') render(allTrends); else render(allTrends.filter(t=>t.cat===f || t.title.toLowerCase().includes(f.toLowerCase())));
+  });
+});
+load();
 </script>
 </body>
 </html>
