@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://trends.afdalbot.com/sitemap.xml
+
+# Block non-content
+Disallow: /functions/
+Disallow: /_headers
+Disallow: /_redirects
