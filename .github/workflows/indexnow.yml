@@ -1,0 +1,27 @@
+name: Instant Indexing
+on:
+  push:
+    branches: [main]
+    paths:
+      - '*.html'
+      - 'functions/**'
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Submit to IndexNow (Bing + Yandex)
+        run: |
+          DOMAIN="trends.afdalbot.com"
+          KEY="161c2d819a244a699639cc876148b31d"
+          URLS=$(ls *.html 2>/dev/null | sed "s|^|https://$DOMAIN/|" | sed "s|index.html||" | jq -R. | jq -s. 2>/dev/null || echo '["https://'"$DOMAIN"'/"]')
+          URLS=$(echo $URLS | jq '. + ["https://'"$DOMAIN"'/"]' | jq 'unique')
+          PAYLOAD=$(jq -n --arg host "$DOMAIN" --arg key "$KEY" --arg keyLocation "https://$DOMAIN/$KEY.txt" --argjson urlList "$URLS" '{host: $host, key: $key, keyLocation: $keyLocation, urlList: $urlList}')
+          echo "Submitting: $PAYLOAD"
+          curl -X POST https://api.indexnow.org/indexnow -H "Content-Type: application/json" -d "$PAYLOAD" -v
+          curl -X POST https://www.bing.com/indexnow -H "Content-Type: application/json" -d "$PAYLOAD" -v
+      - name: Ping Sitemaps (Google + Bing)
+        run: |
+          curl "https://www.google.com/ping?sitemap=https://trends.afdalbot.com/sitemap.xml" || true
+          curl "https://www.bing.com/ping?sitemap=https://trends.afdalbot.com/sitemap.xml" || true
+          echo "Sitemaps pinged"
